@@ -350,6 +350,8 @@ setMethod(
     signature(object = "IlluminaMethylationAnnotation"),
     function(object) {
         maniString <- .getManifestString(object@annotation)
+        # TODO: remove
+        print(maniString)
         if (!require(maniString, character.only = TRUE)) {
             stop(sprintf("cannot load manifest package %s", maniString))
         }
