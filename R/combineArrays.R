@@ -34,7 +34,7 @@
 
     outType <- match.arg(outType)
     .isRGOrStop(rgSet)
-    stopifnot(.is450k(rgSet) || .isEPIC(rgSet))
+    stopifnot(.is450k(rgSet) || .isEPIC(rgSet) || .isEPICv2(rgSet))
 
     array <- annotation(rgSet)["array"]
     if (array == outType) stop("'rgSet' already in the 'outType' array type.")
